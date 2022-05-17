@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.RegisterGridPage">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center">            
+            <StackLayout Margin="20,32"
+                         Spacing="0">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="0,0" Grid.Row="0" Grid.Column="0" BackgroundColor="Blue" />
+                    <Label Text="0,1" Grid.Row="0" Grid.Column="1" BackgroundColor="DarkBlue" />
+
+                    <Label Text="1,0" Grid.Row="1" Grid.Column="0" BackgroundColor="Green" />
+                    <Label Text="1,1" Grid.Row="1" Grid.Column="1" BackgroundColor="DarkGreen" />
+
+                    <Label Text="2,0" Grid.Row="2" Grid.Column="0" BackgroundColor="Red" />
+                    <Label Text="2,1" Grid.Row="2" Grid.Column="1" BackgroundColor="DarkRed" />
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
