@@ -14,7 +14,43 @@ namespace IntroXamarin.App.Views.Forms
     {
         public RegisterGridPage()
         {
+           
             InitializeComponent();
         }
+
+        private void Register_Clicked(object sender, EventArgs e)
+        {
+            bool required = false;
+            if (string.IsNullOrEmpty(FirstName.Text))
+            {
+                required = true;
+                FirstName.BackgroundColor = Color.Red;
+                FirstName.Opacity = 50;
+            }
+
+            if (required)
+            {
+                DisplayAlert("Notify", "Fields required", "Cancel");
+                return;
+            }
+
+            Indicator.IsRunning = true;
+
+            var firstName = FirstName.Text;
+            var lastName = LastName.Text;
+            var email = Email.Text;
+            var telephone = long.Parse(Telephone.Text);
+            var enrollmentDate = EnrollmentDate.Date;
+
+            var message = $"Register successful {firstName} {lastName}.";
+            DisplayAlert("Notify", message, "Cancel");
+
+            Register.BackgroundColor = Color.DarkMagenta;
+
+            Indicator.IsRunning = false;
+        }
+ 
+
+ 
     }
 }

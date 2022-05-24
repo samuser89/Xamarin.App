@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.CalculatorPage">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="Center"
+                    VerticalOptions="Center">
+
+            <StackLayout Margin="20,32"
+                         Spacing="0">
+                <Label HorizontalOptions="End" Padding="8,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span x:Name="spnFirst" Text="" FontSize="Large" />
+                                <Span x:Name="spnSecond" Text="" FontSize="Large" />
+                                <Span x:Name="spnThird" Text="" FontSize="Large" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Frame BackgroundColor="WhiteSmoke"
+                       CornerRadius="5">
+
+                   
+                        <Label  FontAttributes="Bold" FontSize="Title" HorizontalTextAlignment="End" TextColor="DimGray"
+                                IsEnabled="false" 
+                                x:Name="lblNumber" 
+                                Text=""/>
+                        
+                  
+                </Frame>
+                <Label/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="1" Text="C" CornerRadius="15"  x:Name="Borrar"
+                            Clicked="Click_C"/>
+                    <Button Grid.Row="0" Grid.Column="2" Text="CE" CornerRadius="15" TextColor="Red" x:Name="Limpiar"
+                            Clicked="Btn_AC"/>
+                    
+                    <Button IsEnabled="false" Grid.Row="0" Grid.Column="0" Text="" CornerRadius="15" TextColor="Green" x:Name="Porciento"/>
+                    <Button FontSize="Large" Grid.Row="0" Grid.Column="3" CornerRadius="15" Text="/" TextColor="Black" x:Name="division"
+                            Clicked="Btn_dividir"/>
+
+                    <Button FontSize="Large" Grid.Row="1" Grid.Column="0" CornerRadius="15" Text="7" x:Name="Seven"
+                            Clicked="Click_seven"/>
+                    <Button FontSize="Large" Grid.Row="1" Grid.Column="1" CornerRadius="15" Text="8" x:Name="eight"
+                            Clicked="Click_eight"/>
+                    <Button FontSize="Large" Grid.Row="1" Grid.Column="2" CornerRadius="15" Text="9" x:Name="nine"
+                            Clicked="Click_nine"/>
+                    <Button FontSize="Large" Grid.Row="1" Grid.Column="3" CornerRadius="15" Text="*" x:Name="multiplicacion"
+                            Clicked="Btn_por"/>
+
+                    <Button FontSize="Large" Grid.Row="2" Grid.Column="0" CornerRadius="15" Text="4" x:Name="four"
+                            Clicked="Click_four"/>
+                    <Button FontSize="Large" Grid.Row="2" Grid.Column="1" CornerRadius="15" Text="5" x:Name="five"
+                            Clicked="Click_five"/>
+                    <Button FontSize="Large" Grid.Row="2" Grid.Column="2" CornerRadius="15" Text="6" x:Name="six"
+                            Clicked="Click_six"/>
+                    <Button FontSize="Large" Grid.Row="2" Grid.Column="3" CornerRadius="15" Text="-" x:Name="minus"
+                            Clicked="Btn_restar"/>
+
+                    <Button FontSize="Large" Grid.Row="3" Grid.Column="0" CornerRadius="15" Text="1" x:Name="one"
+                            Clicked="Click_one"/>
+                    <Button FontSize="Large" Grid.Row="3" Grid.Column="1" CornerRadius="15" Text="2" x:Name="two"
+                            Clicked="Click_two"/>
+                    <Button FontSize="Large" Grid.Row="3" Grid.Column="2" CornerRadius="15" Text="3" x:Name="three"
+                            Clicked="Click_three"/>
+                    <Button FontSize="Large" Grid.Row="3" Grid.RowSpan="3" Grid.Column="3" CornerRadius="15" Text="+" x:Name="plus"
+                            Clicked="Btn_sumar"/>
+
+                    <Button IsEnabled="false" FontSize="Large" Grid.Row="4" Grid.Column="0" CornerRadius="15" Text="+/-" x:Name="MasMenos"/>
+                    <Button FontSize="Large" Grid.Row="4" Grid.Column="1" CornerRadius="15" Text="0" x:Name="Cero"
+                            Clicked="Click_zero"/>
+                    <Button IsEnabled="false" FontSize="Large" Grid.Row="4" Grid.Column="2" CornerRadius="15" Text="." x:Name="point" TextColor="Red"
+                            Clicked="Click_point"/>
+                    <Button FontSize="Large" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="15" Text="=" TextColor="White" BackgroundColor="DarkCyan" x:Name="equal"
+                            Clicked="Btn_equals"/>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IntroXamarin.App.Views.Forms.RegisterPage"
+             x:Class="IntroXamarin.App.Views.Forms.RegisterPatternPage"
              xmlns:viewModel="clr-namespace:IntroXamarin.App.ViewModels.Forms">
     <ContentPage.BindingContext>
         <viewModel:RegisterPatternViewModel/>
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Content>
         <ScrollView HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center">
@@ -20,6 +20,11 @@
                        FontSize="Medium"/>
                 </Frame>
                 
+                <Label Text="Register" 
+                       HorizontalTextAlignment="Center"
+                       TextColor="DarkMagenta"
+                       FontSize="Large"/>
+
                 <Label />
                 <Label Text="First Name" />
                 <Entry Placeholder="Enter the first name" x:Name="FirstName" 
@@ -43,7 +48,7 @@
 
                 <Label Text="Enrollment Date" />
                 <DatePicker x:Name="EnrollmentDate" 
-                            Date="{Binding EnrollmentDate}" />
+                            Date="{Binding EnrollmentDate}"/>
 
                 <Button Text="Register" 
                     BackgroundColor="Navy"
